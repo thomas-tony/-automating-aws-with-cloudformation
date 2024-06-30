@@ -22,9 +22,6 @@ Resources:
       KeyName: my-key-pair
 ```
 
-- Replace my-static-website with your bucket name.
-- Click “Save changes.”
-
 ### Step 2: Creating a Stack
 Once you have your template ready, you can use it to create a CloudFormation stack. A stack is a collection of AWS resources defined by the template.
 
@@ -32,7 +29,7 @@ You can create a stack using the AWS Management Console, AWS CLI, or AWS SDKs. H
 
 ```sh
    aws cloudformation create-stack --stack-name MyStack --template-body file://templates/ec2-instance.yaml
-
+```
 
 ## Step 3: Monitoring and Managing Stacks
 After creating a stack, you can monitor its progress and manage its resources using the AWS Management Console or AWS CLI. CloudFormation provides detailed information about the stack’s status and events, helping you track the provisioning process.
@@ -41,6 +38,7 @@ To check the status of a stack using the AWS CLI:
 
 ```sh
    aws cloudformation describe-stacks --stack-name MyStack
+```
 
 ## Step 4: Updating a Stack
 When you need to make changes to your infrastructure, you can update your CloudFormation template and apply the changes to the existing stack. CloudFormation will determine the necessary updates and apply them in a controlled manner.
@@ -49,6 +47,7 @@ To update a stack using the AWS CLI:
 
 ```sh
    aws cloudformation update-stack --stack-name MyStack --template-body file://templates/updated-ec2-instance.yaml
+```
 
 ## Step 5: Deleting a Stack
 If you no longer need the resources provisioned by a stack, you can delete the stack, and CloudFormation will automatically clean up all the associated resources.
@@ -57,6 +56,7 @@ To delete a stack using the AWS CLI:
 
 ```sh
    aws cloudformation delete-stack --stack-name MyStack
+```
 
 ## Additional Resources
 
